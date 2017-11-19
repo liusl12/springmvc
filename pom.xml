@@ -15,7 +15,14 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+    <!--Mockito测试依赖-->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>2.0.2-beta</version>
+      <scope>test</scope>
+    </dependency>
     <!--日志包-->
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -24,11 +31,11 @@
     </dependency>
 
     <!--j2ee相关包 servlet、jsp、jstl-->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.1.0</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>javax.servlet</groupId>-->
+      <!--<artifactId>javax.servlet-api</artifactId>-->
+      <!--<version>3.1.0</version>-->
+    <!--</dependency>-->
     <!--<dependency>-->
       <!--<groupId>javax.servlet.jsp</groupId>-->
       <!--<artifactId>jsp-api</artifactId>-->
