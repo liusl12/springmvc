@@ -12,11 +12,12 @@ import java.util.List;
  */
 @Repository
 public class SpittleRepositoryImp implements SpittleRepository{
-    public List<Spittle> findSpittles(Long max, int count){
+    public List<Spittle> findSpittles(long max, int count){
         List<Spittle> SpittleList = new ArrayList<Spittle>();//初始化一个ArrayList
         for(int i=0;i<count;i++){
             SpittleList.add(new Spittle("Spittle"+i,new Date()));//初始化一个Spittle对象，添加到ArrayList中
         }
         return SpittleList;
     }
+
 }
