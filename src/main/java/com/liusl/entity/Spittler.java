@@ -1,5 +1,7 @@
 package com.liusl.entity;
 
+import org.springframework.stereotype.Component;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
