@@ -7,4 +7,5 @@ import com.liusl.entity.Spittler;
  */
 public interface SpittlerRepository {
     public void save(Spittler spittler);    //保存spittler信息
+    public Spittler findByUsername(String username);    //通过username寻找Spittler
 }

@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>注册</h1>
-<form method="post">
+<form method="POST">
     <label>First Name:</label><input type="text" name="FirstName" /><br/>
     <label>Last Name:</label><input type="text" name="LastName" /><br/>
     <label>Username:</label><input type="text" name="Username" /><br/>

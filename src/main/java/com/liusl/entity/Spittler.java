@@ -25,6 +25,16 @@ public class Spittler {
     @Size(min = 5,max = 30)
     private String firstName;   //姓，非空，5到30个字符
 
+    public Spittler(){
+
+    }
+    public Spittler(String username,String password,String lastName,String firstName){
+        this.id = new java.util.Random().nextLong();
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
     public Long getId() {
         return id;
     }
