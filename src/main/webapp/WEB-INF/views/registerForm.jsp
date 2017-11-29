@@ -12,11 +12,12 @@
 </head>
 <body>
 <h1>注册</h1>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
     <label>First Name:</label><input type="text" name="FirstName" /><br/>
     <label>Last Name:</label><input type="text" name="LastName" /><br/>
     <label>Username:</label><input type="text" name="Username" /><br/>
     <label>Password:</label><input type="password" name="Password" /><br/>
+    <label>profilePicture:</label><input type="file" name="profilePicture" accept="image/jpeg,image/png,image/gif" /><br/>
     <input type="submit" name="Register" />
 </form>
 </body>

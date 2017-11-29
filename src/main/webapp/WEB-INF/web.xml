@@ -20,6 +20,12 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
     <async-supported>true</async-supported>
+    <!--multipart配置-->
+    <multipart-config>
+      <location>/tmp/spittr/uploads</location><!--文件上传位置-->
+      <max-file-size>2097152</max-file-size><!--上传文件的最大大小-->
+      <max-request-size>4194304</max-request-size><!--整个请求大小-->
+    </multipart-config>
   </servlet>
   <servlet-mapping>
     <servlet-name>spring</servlet-name>

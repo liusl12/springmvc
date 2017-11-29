@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
 
 
 /**
@@ -35,12 +35,26 @@ public class SpittlerController {
     /*
         保存表单提交的信息
      */
+//    @RequestMapping(value = "/register",method = RequestMethod.POST)
+//    public String processRegisteration(@RequestPart("profilePicture") byte[] profilePicture,
+//                                       @Valid Spittler spittler,
+//                                       Errors errors){
+//        if(errors.hasErrors()){//如果校验有错误，重新返回表单
+//            return "registerForm";
+//        }
+//        spittlerRepositoryImp.save(spittler);
+//        return "redirect:/spittler/"+spittler.getUsername();
+//    }
     @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public String processRegisteration(@Valid Spittler spittler, Errors errors){
+    public String processRegisteration(@RequestParam("profilePicture") MultipartFile profilePicture,
+                                       @Valid Spittler spittler,
+                                       Errors errors) throws IOException {
         if(errors.hasErrors()){//如果校验有错误，重新返回表单
             return "registerForm";
         }
         spittlerRepositoryImp.save(spittler);
+        //文件保存到本地
+        profilePicture.transferTo(new File(profilePicture.getOriginalFilename()));
         return "redirect:/spittler/"+spittler.getUsername();
     }
 
